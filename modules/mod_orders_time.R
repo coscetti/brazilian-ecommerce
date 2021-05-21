@@ -20,9 +20,9 @@ orders_time_ui <- function(id, icon = "icon-wallet", icon_text = "") {
     column(width = 2, sliderInput(ns("date_slider"), label = "Cut Date", 
                                   min = 0.6, max = 0.95, value = 0.7)),
     column(width = 5, plotlyOutput(ns("orders_over_time"), 
-                                 width="100%", height=500)),
+                                 width="100%", height="500px")),
     column(width = 5, plotlyOutput(ns("orders_over_time_weekly"), 
-                                    width="100%", height=500)),
+                                    width="100%", height="500px")),
     # column(width = 10, plotlyOutput(ns("orders_over_time_monthly"), 
     #                                 width="100%", height=500)),
     

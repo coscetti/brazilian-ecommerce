@@ -18,7 +18,7 @@ heatmap_chart_ui <- function(id, icon = "icon-wallet", icon_text = "") {
   
   fluidRow(
     column(width = 12, echarts4rOutput(ns("plot_monthly_blogs"), 
-                                       height = "800px")),
+                                       height = "500px")),
     # column(width = 4, echarts4rOutput(ns("plot_n_words"), height = "250px")),
     # column(width = 4, echarts4rOutput(ns("plot_day_of_week"), height = "250px")),
     # column(width = 4, echarts4rOutput(ns("plot_acc_author"), height = "250px")),

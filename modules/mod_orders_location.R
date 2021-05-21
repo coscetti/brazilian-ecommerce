@@ -17,7 +17,8 @@ orders_location_ui <- function(id, icon = "icon-wallet", icon_text = "") {
   ns <- NS(id)
   
   fluidRow(
-    column(width = 12, rbokehOutput(ns("orders_location"), 
+    column(width = 12, rbokehOutput(ns("orders_location"),
+                                    height = "500px",
                                     width = "100%"))
     # column(width = 12, echarts4rOutput(ns("plot_monthly_blogs"), 
     #                                    height = "800px")),
