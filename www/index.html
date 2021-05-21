@@ -55,38 +55,42 @@
               <li><a href="#totop">Home</a></li>
               <li><a class="section-scroll" href="#data">Data</a></li>
               <li><a class="section-scroll" href="#stats">Stats</a></li>
-              <li><a class="section-scroll" href="#topics">Topics</a></li>
-              <li><a class="section-scroll" href="#project">Project</a></li>
+              <li><a class="section-scroll" href="#orders">Orders</a></li>
+              <li><a class="section-scroll" href="#map">Map</a></li>
+              <li><a class="section-scroll" href="#reviews">Reviews</a></li>
               <!--li><a class="section-scroll" href="#contact">Contact</a></li-->
             </ul>
           </div>
         </div>
       </nav>
-      <section class="home-section home-full-height bg-dark bg-gradient" id="home" data-background="assets/images/section-10bis.jpg">
+      <section class="home-section home-full-height bg-dark bg-gradient" id="home" data-background="assets/images/Olist.jpg">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1">10+ Years of R Blogs</div>
-            <div class="font-alt mb-40 titan-title-size-4">Blog Explorer</div><a class="section-scroll btn btn-border-w btn-round" href="#data">Learn More</a>
+            <div class="font-alt mb-30 titan-title-size-1">Brazilian e-commerce Data Analysis</div>
+            <div class="font-alt mb-40 titan-title-size-4">OLIST</div><a class="section-scroll btn btn-border-w btn-round" href="#data">Learn More</a>
           </div>
         </div>
       </section>
       <div class="main">
-        <section class="module" id="data">
+        <section class="module bg-dark-90" id="data">
           <div class="container">
             <div class="row multi-columns-row">
               <div class="col-sm-6 col-md-3 col-lg-3">
                 {{ blog_counter }}
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
+                {{ n_items }}
+              </div>
+              <div class="col-sm-6 col-md-3 col-lg-3">
                 {{ avg_price }}
               </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
-                {{ tot_customers }}
+                {{ n_sellers }}
               </div>
           </div>
         </section>
 
-        <section class="module bg-dark-90" id="stats">
+        <section class="module" id="stats">
           <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -96,8 +100,49 @@
               </div>
             </div>
             {{ heatmap_chart }}
+            <!-- {{ orders_time }} -->
           </div>
         </section>
+
+        <section class="module bg-dark-90" id="orders">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Orders over time</h2>
+                <div class="module-subtitle font-serif">
+                </div>
+              </div>
+            </div>
+            {{ orders_time }}
+          </div>
+        </section>
+
+        <section class="module" id="map">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Orders volume distribution</h2>
+                <div class="module-subtitle font-serif">
+                </div>
+              </div>
+            </div>
+              {{ orders_location }}
+          </div>
+        </section>
+
+        <section class="module bg-dark-90" id="reviews">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Reviews wordcloud</h2>
+                <div class="module-subtitle font-serif">
+                </div>
+              </div>
+            </div>
+              {{ wordcloud }}
+          </div>
+        </section>
+
 
       </div>
       <hr class="divider-d">
