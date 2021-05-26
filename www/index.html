@@ -56,8 +56,9 @@
               <li><a class="section-scroll" href="#data">Data</a></li>
               <li><a class="section-scroll" href="#stats">Stats</a></li>
               <li><a class="section-scroll" href="#orders">Orders</a></li>
-              <li><a class="section-scroll" href="#map">Map</a></li>
               <li><a class="section-scroll" href="#reviews">Reviews</a></li>
+              <li><a class="section-scroll" href="#score">Score</a></li>
+
               <!--li><a class="section-scroll" href="#contact">Contact</a></li-->
             </ul>
           </div>
@@ -72,9 +73,13 @@
         </div>
       </section>
       <div class="main">
-        <section class="module bg-dark-90" id="data">
+        <section class="module" id="data">
           <div class="container">
             <div class="row multi-columns-row">
+              <h2 class="module-title font-alt">Data</h2>
+              <div class="module-subtitle font-serif">
+                From Sept. 2016 to Sept. 2018
+              </div>
               <div class="col-sm-6 col-md-3 col-lg-3">
                 {{ blog_counter }}
               </div>
@@ -90,7 +95,7 @@
           </div>
         </section>
 
-        <section class="module" id="stats">
+        <section class="module bg-dark-90" id="stats">
           <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -100,11 +105,12 @@
               </div>
             </div>
             {{ heatmap_chart }}
+            {{ orders_location }}
             <!-- {{ orders_time }} -->
           </div>
         </section>
 
-        <section class="module bg-dark-90" id="orders">
+        <section class="module" id="orders">
           <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -114,19 +120,6 @@
               </div>
             </div>
             {{ orders_time }}
-          </div>
-        </section>
-
-        <section class="module" id="map">
-          <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Orders volume distribution</h2>
-                <div class="module-subtitle font-serif">
-                </div>
-              </div>
-            </div>
-              {{ orders_location }}
           </div>
         </section>
 
@@ -142,6 +135,20 @@
               {{ wordcloud }}
           </div>
         </section>
+
+        <section class="module" id="score">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">Review Score Prediction</h2>
+                <div class="module-subtitle font-serif">
+                </div>
+              </div>
+            </div>
+              {{ score_prediction }}
+          </div>
+        </section>
+
 
 
       </div>

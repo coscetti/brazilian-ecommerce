@@ -1,8 +1,8 @@
 ################################################################################
-# Shiny module insights_charts
+# Shiny module orders_time
 #
-# Author: Stefan Schliebs
-# Created: 2020-03-16 09:13:12
+# Author: Simone Coscetti
+# Created: 2021-05-25 
 ################################################################################
 
 
@@ -23,12 +23,6 @@ orders_time_ui <- function(id, icon = "icon-wallet", icon_text = "") {
                                  width="100%", height="500px")),
     column(width = 5, plotlyOutput(ns("orders_over_time_weekly"), 
                                     width="100%", height="500px")),
-    # column(width = 10, plotlyOutput(ns("orders_over_time_monthly"), 
-    #                                 width="100%", height=500)),
-    
-    # column(width = 4, echarts4rOutput(ns("plot_n_words"), height = "250px")),
-    # column(width = 4, echarts4rOutput(ns("plot_day_of_week"), height = "250px")),
-    # column(width = 4, echarts4rOutput(ns("plot_acc_author"), height = "250px")),
   )
   
 }
@@ -71,7 +65,6 @@ orders_time <- function(input, output, session, d_data_model) {
         x="Date",
         y="Frequency") + 
       theme(legend.position="top")
-    # grid.arrange(ggdays, nrow=1)
     ggplotly(gg_days)
   })
   
