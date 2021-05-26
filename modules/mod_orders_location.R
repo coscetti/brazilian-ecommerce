@@ -25,6 +25,11 @@ orders_location_ui <- function(id, icon = "icon-wallet", icon_text = "") {
 
 orders_location <- function(input, output, session, d_data_model) {
   
+  
+  my_scale <- function(x){
+    scales::rescale(x, to = c(3, 7))
+  }
+  
   output$orders_location <- renderEcharts4r({
     req(d_data_model())
     
