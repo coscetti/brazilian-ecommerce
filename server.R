@@ -10,7 +10,7 @@ server <- function(input, output, session) {
   
   callModule(heatmap_chart, "heatmap_chart", d_data_model)
   callModule(orders_time, "orders_time", d_data_model)
-  callModule(orders_location, "orders_location", d_data_model)
+  # callModule(orders_location, "orders_location", d_data_model)
   callModule(wordcloud, "wordcloud", d_data_model)
   callModule(score_prediction, "score_prediction", d_data_model)
   
